@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}디테일 페이지{% endblock %}
+{% block link %} {% static 'css/detail.css' %}{% endblock %}
+
+{% block content %}
+<div class="content">
+        <h2>제목 : {{diary.title}}</h2>
+        <h4>날짜 : {{diary.pub_date}}</h4>
+        <h4>오늘의 날씨 : {{diary.weather}}</h4>
+        <hr size="3px" noshade color="#e4e4e4">
+        <p>내용 : {{diary.body}}</p>
+        <p><img src="{{diary.image.url}}" width="300" height="300" alt="오늘의 썸네일"/></p>
+</div>
+
+<div class="buttons">
+        <a href="{% url 'home' %}"><input type="button" id="button" value="홈으로"></a>
+        <a href="{% url 'delete' diary.id %}"><input type="button" id="button" value="일기삭제"></a>
+</div>
+
+{% endblock %}

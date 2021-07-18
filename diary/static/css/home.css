@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'IBMPlexSansKR-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.head{
+    font-family: 'IBMPlexSansKR-Regular';
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+}
+
+.content{
+    font-family: 'IBMPlexSansKR-Regular';
+    display: inline-block;
+    text-align: center;
+    margin-top: 3%;
+    margin-left: 13%;
+    border-radius: 20px;
+    background-color: #CEE4FF;
+}
+
+.title{
+    font-size: 22px;
+}
+
+#nav{
+    font-family: 'IBMPlexSansKR-Regular';
+    display: flex;
+    justify-content: center;
+    margin-top: 1%;
+    font-size: 18px;
+}
+
+.content a:visited{
+    color: #000;
+}
+.content a:hover{
+    color: #007BFF;
+}
+#nav a:visited{
+    color: #000;
+}
+#nav a:hover{
+    color: #007BFF;
+}
+#detail{
+    font-size: 18px;
+}
+a{
+    text-decoration: none;
+}

@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}일기장{% endblock %}
+{% block link %} {% static 'css/home.css' %} {% endblock %}
+{% block content %}
+
+    <h2 class="head">MY DIARY🥰</h2>
+
+    {% for a in diarys %}
+    <div class="content">
+        <p class="title"><strong>{{a.title}}</strong></p>
+        <p><img src="{{a.image.url}}" alt="오늘의 썸네일"  width="300" height="300"/></p>
+        <a id="detail" href="{% url 'detail' a.id %}">자세히보기</a>
+    </div>
+    {% endfor %}
+
+    <div id='nav'>
+        {% if diarys.has_previous %}
+        <a href='?page={{diarys.previous_page_number}}'><</a>
+        {% endif %}
+
+        <span>{{diarys.number}}</span>
+        <span> / </span>
+        <span>{{diarys.paginator.num_pages}}</span>
+
+        {% if diarys.has_next %}
+        <a href='?page={{diarys.next_page_number}}'>></a>
+        {% endif %}
+    </div>
+
+
+{% endblock %}

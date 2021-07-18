@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}일기검색{% endblock %}
+{% block link %} {% static 'css/search.css' %}{% endblock %}
+{% block content %}
+
+    {% if search_text %}
+    <h2 class="result">"<strong>{{search_text}}</strong>" 검색 결과</h2>
+    {% else %}
+    <h2 class="head">일기를 검색해보세요🔍</h2>
+    {% endif %}
+
+    <div class="search">
+        <form action="" method="get">
+            <input type="text" name="search_text" placeholder="검색할 제목을 입력해주세요!">
+            <button>검색</button>
+        </form>
+    </div>
+
+
+    {% if search_text %}
+        {% for a in diarys %}
+        <div class="content">
+            <span class="title"><strong>{{a.title}}</strong></span><br>
+            <span><img src="{{a.image.url}}"  width="300" height="300"></span><br>
+            <a href="{% url 'detail' a.id %}" id="detail">
+                자세히보기
+            </a>
+        </div>
+        {% endfor %}
+    {% else %}
+{% endif %}
+{% endblock %}   

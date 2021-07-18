@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'IBMPlexSansKR-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.title{
+    font-family: 'IBMPlexSansKR-Regular';
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    font-size: 30px;
+}
+
+.content{
+    font-family: 'IBMPlexSansKR-Regular';
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+    font-size: 20px;
+    margin-left: 2%;
+}
+
+button{
+    background-color: #CEE4FF;
+    border-radius: 8px;
+    margin-left: 35%;
+    border: 0;
+    outline: 0;
+}
+
+#diary_title{
+    margin-left: 3%;
+    margin-bottom: 5%;
+}
+
+#weather{
+    margin-bottom: 5%;
+}
+
+#body {
+    margin-bottom: 5%;
+}

@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'BBTreeGB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_nine_@1.1/BBTreeGB.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.bodystyle{
+    font-family: 'BBTreeGB';
+    display: flex;
+    justify-content: center;
+    background-color: aqua;
+}
+
+.content{
+    display: inline;
+    display: flex;
+    justify-content: center;
+}
+
+#nav{
+    display: flex;
+    justify-content: center;
+}
